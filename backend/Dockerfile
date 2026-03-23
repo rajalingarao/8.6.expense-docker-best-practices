@@ -13,3 +13,10 @@ COPY *.js .
 RUN npm install
 USER expense
 CMD ["node","index.js"]
+
+
+# addgroup -S expense → Creates a system group named expense.
+# -S = system group (no login, lower UID/GID range).
+# adduser -S expense -G expense → Creates a system user named expense and assigns it to the expense group.
+# -S = system user
+# -G expense = add the user to the expense group
